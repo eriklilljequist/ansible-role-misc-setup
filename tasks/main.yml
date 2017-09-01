@@ -1,0 +1,15 @@
+---
+# tasks file for misc_setup
+- name: Install misc programs
+  apt: name={{ item }} state=present force=yes
+  with_items:
+     - 'curl'
+     - 'awscli'
+     - 'kdiff3'
+     - 'vim'
+     - 'python-pip'
+     - 'python-setuptools'
+     - 'libffi-dev'
+     - 'python-dev'
+     - 'python-pycurl'
+     - 'libssl-dev'
