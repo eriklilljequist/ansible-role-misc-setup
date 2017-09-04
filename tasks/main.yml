@@ -1,10 +1,5 @@
 ---
 # tasks file for misc_setup
-- name: Install "eslint" node.js package globally.
-  npm:
-    name: eslint
-    global: yes
-    
 - name: Install misc programs
   apt: name={{ item }} state=present force=yes
   with_items:
